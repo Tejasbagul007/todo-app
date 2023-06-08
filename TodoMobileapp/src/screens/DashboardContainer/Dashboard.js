@@ -21,7 +21,7 @@ import styles from "./DashboardStyle";
 import { images } from "../../resources/images";
 import { colors } from "../../resources/colors";
 import AnalogClock from "react-native-clock-analog";
-import { logoutUser } from "../../redux/action";
+// import { logoutUser } from "../../redux/action";
 
 const DashboardScreen = ({navigation}) => {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -52,8 +52,10 @@ const DashboardScreen = ({navigation}) => {
       return "Good Morning";
     } else if (currentHour < 18) {
       return "Good Afternoon";
-    } else {
+    } else if (currentHour < 22) {
       return "Good Evening";
+    } else {
+      return "Good Night";
     }
   };
 
@@ -113,12 +115,12 @@ const DashboardScreen = ({navigation}) => {
           {item.completed ? (
             <Image
               style={[
-                styles.checkbox,
+                styles.checkBox,
                 item.completed && { backgroundColor: colors.aqua },
               ]}
             />
           ) : (
-            <Image style={styles.checkbox} />
+            <Image style={styles.checkBox} />
           )}
         </TouchableOpacity>
       </View>
@@ -127,7 +129,7 @@ const DashboardScreen = ({navigation}) => {
           {item.text}
         </Text>
       </View>
-      <View style={styles.smallbox}>
+      <View style={styles.smallBox}>
         <TouchableOpacity onPress={() => deleteTodo(index)}>
           <Text style={styles.deleteText}>Delete</Text>
         </TouchableOpacity>
@@ -139,14 +141,14 @@ const DashboardScreen = ({navigation}) => {
     <View style={styles.container}>
       <View style={styles.rectangleWrapper}>
         <View style={styles.circle}>
-          <Image source={images.cpcircles} resizeMode="contain" />
+          <Image source={images.cpCircles} resizeMode="contain" />
         </View>
         <View style={styles.profile}>
           <Image source={images.profile} resizeMode="contain" />
         </View>
 
         <View style={styles.welcomeText}>
-          <Text style={styles.boldtext}>
+          <Text style={styles.boldText}>
             {" "}
             Welcome,{userData.userDetails.registerUsername}!
           </Text>
@@ -154,8 +156,8 @@ const DashboardScreen = ({navigation}) => {
       </View>
 
       <ScrollView>
-        <View style={styles.goodafternoonStyle}>
-          <Text style={styles.boldtext2}>{getGreeting()} ! </Text>
+        <View style={styles.goodAfternoonStyle}>
+          <Text style={styles.boldText2}>{getGreeting()} ! </Text>
         </View>
 
         <View style={styles.clock}>
@@ -174,15 +176,15 @@ const DashboardScreen = ({navigation}) => {
             />
           </View>
 
-          <View style={styles.tasklist}>
-            <Text style={styles.boldtext3}> Task list </Text>
+          <View style={styles.taskList}>
+            <Text style={styles.boldText3}> Task list </Text>
           </View>
         </View>
 
         <View style={styles.box}>
-          <Text style={styles.textdaily}>Daily Task</Text>
+          <Text style={styles.textDaily}>Daily Task</Text>
 
-          <View style={styles.plusmain}>
+          <View style={styles.plusMain}>
             <TouchableOpacity onPress={() => setModalVisible(true)}>
               <Image source={images.plus} />
             </TouchableOpacity>

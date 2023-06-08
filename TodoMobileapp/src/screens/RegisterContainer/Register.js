@@ -15,6 +15,8 @@ import SignupSignin from "../../components/button/Signup_Signin";
 import UPcircles from "../../components/circles/UPcircles";
 import styles from "./RegisterStyle";
 import { setUser } from "../../redux/action";
+import { passwordRegex, emailRegex } from "../../components/validations/constants";
+// import TextInputField from "../../components/InputFields/TextInputField";
 
 const RegisterScreen = (props) => {
   const dispatch = useDispatch();
@@ -29,17 +31,10 @@ const RegisterScreen = (props) => {
       return;
     }
 
-    // Email validation regex pattern
-    const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
-
     if (!emailRegex.test(regemail)) {
       alert("Please enter a valid email address");
       return;
     }
-
-    // Password validation regex pattern
-    const passwordRegex =
-      /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8,}$/;
 
     if (!passwordRegex.test(regpassword)) {
       alert(
@@ -86,8 +81,8 @@ const RegisterScreen = (props) => {
           }}
         >
           <View style={styles.bold}>
-            <Text style={styles.boldtext}>Welcome to Onboard! </Text>
-            <Text style={styles.textwords}>
+            <Text style={styles.boldText}>Welcome to Onboard! </Text>
+            <Text style={styles.textWords}>
               Let’s help to meet up your tasks.
             </Text>
           </View>
@@ -128,9 +123,9 @@ const RegisterScreen = (props) => {
             </View>
           </KeyboardAwareScrollView>
 
-          <View style={styles.textwords2}>
-            <Text style={styles.accountstyle}>Already have an account ?</Text>
-            <Text style={styles.signin}>
+          <View style={styles.textWords2}>
+            <Text style={styles.accountStyle}>Already have an account ?</Text>
+            <Text>
               <SignupSignin text="Sign In" onPress={() => handleSignIn()} />
             </Text>
           </View>

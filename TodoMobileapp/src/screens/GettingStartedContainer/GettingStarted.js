@@ -18,15 +18,15 @@ const GettingStarted = ({ navigation }, props) => {
 
       <View style={styles.todoImg}>
         <Image
-          source={images.todocheck}
+          source={images.todoCheck}
           style={styles.checkingImg}
           resizeMode="contain"
         />
       </View>
 
       <View style={styles.bold}>
-        <Text style={styles.boldtext}>Gets things with TODs</Text>
-        <Text style={styles.textwords}>
+        <Text style={styles.boldText}>Gets things with TODs</Text>
+        <Text style={styles.textWords}>
           Lorem ipsum dolor sit amet consectetur. Eget sit nec et euismod.
           Consequat urna quam felis interdum quisque. Malesuada adipiscing
           tristique ut eget sed.

@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: hp("13%"),
   },
-  textwords: {
+  textWords: {
     width: wp("45%"),
     left: wp("1%"),
     textAlign: "center",
@@ -27,15 +27,15 @@ const styles = StyleSheet.create({
     marginBottom: hp("1%"),
     marginTop: hp("3%"),
   },
-  textwords2: {
+  textWords2: {
     flex: 1,
     flexDirection: "row",
     alignItems: "center",
   },
-  accountstyle: {
+  accountStyle: {
     marginBottom: hp("0.5%"),
   },
-  boldtext: {
+  boldText: {
     marginTop: hp("10%"),
     width: wp("50%"),
     fontWeight: "bold",

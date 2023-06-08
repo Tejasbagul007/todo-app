@@ -6,12 +6,12 @@ import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 
 //CUSTOM IMPORTS
-import GettingStarted from "./Figma_Mobile_app/src/screens/GettingStartedContainer/GettingStarted";
-import registerScreen from "./Figma_Mobile_app/src/screens/RegisterContainer/Register";
-import LoginScreen from "./Figma_Mobile_app/src/screens/LoginContainer/Login";
-import DashboardScreen from "./Figma_Mobile_app/src/screens/DashboardContainer/Dashboard";
-import { store, persistor } from "./Figma_Mobile_app/src/redux/store";
-import { Authentication } from "./Figma_Mobile_app/src/screens/LoginContainer/Authentication";
+import GettingStarted from "./TodoMobileapp/src/screens/GettingStartedContainer/GettingStarted";
+import registerScreen from "./TodoMobileapp/src/screens/RegisterContainer/Register";
+import LoginScreen from "./TodoMobileapp/src/screens/LoginContainer/Login";
+import DashboardScreen from "./TodoMobileapp/src/screens/DashboardContainer/Dashboard";
+import { store, persistor } from "./TodoMobileapp/src/redux/store";
+import { Authentication } from "./TodoMobileapp/src/components/validations/Authentication";
 
 
 const Stack = createStackNavigator();
@@ -45,7 +45,7 @@ function App() {
             <Stack.Screen
               name="Dashboard"
               component={DashboardScreen}
-              options={{ headerShown: false, gestureEnabled: true }}
+              options={{ headerShown: false, gestureEnabled: false }}
             />
           </Stack.Navigator>
         </NavigationContainer>

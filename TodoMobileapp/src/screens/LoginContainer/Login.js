@@ -17,6 +17,8 @@ import SignupSignin from "../../components/button/Signup_Signin";
 import UPcircles from "../../components/circles/UPcircles";
 import styles from "./LoginStyle";
 import { images } from "../../resources/images";
+import { passwordRegex } from "../../components/validations/constants";
+
 
 const LoginScreen = ({ navigation }) => {
   const [userId, setUserId] = useState("");
@@ -33,10 +35,6 @@ const LoginScreen = ({ navigation }) => {
       alert("Please Enter your Username & Password");
       return;
     }
-
-    // Password validation regex pattern
-    const passwordRegex =
-      /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8,}$/;
 
     if (!passwordRegex.test(password)) {
       alert(
@@ -80,11 +78,11 @@ const LoginScreen = ({ navigation }) => {
             alignItems: "center",
           }}
         >
-          <Text style={styles.boldtext}> Welcome back </Text>
+          <Text style={styles.boldText}> Welcome back </Text>
 
           <View>
             <Image
-              source={images.backtoschool}
+              source={images.backToSchool}
               style={styles.schoolImg}
               resizeMode="contain"
             />
@@ -109,7 +107,7 @@ const LoginScreen = ({ navigation }) => {
                 secureTextEntry={true}
                 placeholder="Enter Your Password"
               />
-              <Text style={styles.forgetpwd}>Forget password ?</Text>
+              <Text style={styles.forgetPwd}>Forget password ?</Text>
               {/* HOC BUTTON */}
               <View style={styles.btn}>
                 <ButtonsHOC text="Login" onPress={() => handleLogin()} />
@@ -117,9 +115,9 @@ const LoginScreen = ({ navigation }) => {
             </View>
           </KeyboardAwareScrollView>
 
-          <View style={styles.textwords2}>
-            <Text style={styles.accountstyle}>Don't have an account ?</Text>
-            <Text style={styles.signin}>
+          <View style={styles.textWords2}>
+            <Text style={styles.accountStyle}>Don't have an account ?</Text>
+            <Text>
               <SignupSignin text="Sign Up" onPress={() => handlesignUp()} />
             </Text>
           </View>

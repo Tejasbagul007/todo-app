@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: colors.lightGray,
   },
-  boldtext: {
+  boldText: {
     flex: 1,
     marginTop: hp("20%"),
     width: wp("53%"),
@@ -51,17 +51,17 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white,
   },
 
-  textwords2: {
+  textWords2: {
     flex: 1,
     flexDirection: "row",
     alignItems: "center",
   },
 
-  accountstyle: {
+  accountStyle: {
     marginBottom: hp("0.5%"),
   },
 
-  forgetpwd: {
+  forgetPwd: {
     color: colors.aqua,
     marginLeft: wp("4%"),
     justifyContent: "center",
