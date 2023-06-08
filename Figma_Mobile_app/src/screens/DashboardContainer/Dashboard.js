@@ -21,7 +21,7 @@ import styles from "./DashboardStyle";
 import { images } from "../../resources/images";
 import { colors } from "../../resources/colors";
 import AnalogClock from "react-native-clock-analog";
-import { logoutUser } from "../../redux/action";
+//import { logoutUser } from "../../redux/action";
 
 const DashboardScreen = ({navigation}) => {
   const [currentTime, setCurrentTime] = useState(new Date());
