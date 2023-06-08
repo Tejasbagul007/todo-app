@@ -1,0 +1,15 @@
+export const colors = {
+  white: "#ffffff",
+  lightGray: "#F0F4F3",
+  darkGray: "#555555",
+  aqua: "#50C2C9",
+  black: "black",
+  Gainsboro: "#DFDFDF",
+  faintGrey: "#ccc",
+  DodgerBlue: "#2196F3",
+  silver: "#C8C8C8",
+  BluishTurquoise: "#7DC9CE",
+  Teal: "#2E8F95",
+  PowderBlue: "#F1FDFE",
+  softmint: "#F0F4F3",
+};
