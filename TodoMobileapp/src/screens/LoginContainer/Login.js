@@ -18,7 +18,7 @@ import UPcircles from "../../components/circles/UPcircles";
 import styles from "./LoginStyle";
 import { images } from "../../resources/images";
 import { passwordRegex } from "../../components/validations/constants";
-
+import RNTextInput from "../../components/InputFields/TextInputField";
 
 const LoginScreen = ({ navigation }) => {
   const [userId, setUserId] = useState("");
@@ -90,18 +90,16 @@ const LoginScreen = ({ navigation }) => {
 
           {/* TEXT INPUT FIELDs */}
           <KeyboardAwareScrollView
-            contentContainerStyle={styles.TextInputmain}
+            contentContainerStyle={styles.textInputmain}
             keyboardShouldPersistTaps="handled"
           >
             <View>
-              <TextInput
-                style={styles.TextInput}
+              <RNTextInput
                 placeholder="User ID"
                 value={userId}
                 onChangeText={(text) => setUserId(text)}
               />
-              <TextInput
-                style={styles.TextInput}
+              <RNTextInput
                 value={password}
                 onChangeText={(text) => setPassword(text)}
                 secureTextEntry={true}

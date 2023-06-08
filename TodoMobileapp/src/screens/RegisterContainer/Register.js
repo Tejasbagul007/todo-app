@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import {
-  View,
-  Text,
-  SafeAreaView,
-  TextInput,
-  ScrollView,
-} from "react-native";
+import { View, Text, SafeAreaView, TextInput, ScrollView } from "react-native";
 import { useDispatch } from "react-redux";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
@@ -15,8 +9,11 @@ import SignupSignin from "../../components/button/Signup_Signin";
 import UPcircles from "../../components/circles/UPcircles";
 import styles from "./RegisterStyle";
 import { setUser } from "../../redux/action";
-import { passwordRegex, emailRegex } from "../../components/validations/constants";
-// import TextInputField from "../../components/InputFields/TextInputField";
+import {
+  passwordRegex,
+  emailRegex,
+} from "../../components/validations/constants";
+import RNTextInput from "../../components/InputFields/TextInputField";
 
 const RegisterScreen = (props) => {
   const dispatch = useDispatch();
@@ -88,29 +85,28 @@ const RegisterScreen = (props) => {
           </View>
 
           {/* Text Input Fields */}
-          <KeyboardAwareScrollView contentContainerStyle={styles.TextInputmain} keyboardShouldPersistTaps="handled">
+          <KeyboardAwareScrollView
+            contentContainerStyle={styles.textInputmain}
+            keyboardShouldPersistTaps="handled"
+          >
             <View>
-              <TextInput
-                style={styles.TextInput}
+              <RNTextInput
                 value={registerUsername}
                 onChangeText={(text) => setregisterUsername(text)}
                 placeholder="Enter your full name"
               />
-              <TextInput
-                style={styles.TextInput}
+              <RNTextInput
                 value={regemail}
                 onChangeText={setEmail}
                 placeholder="Enter Your Email"
               />
-              <TextInput
-                style={styles.TextInput}
+              <RNTextInput
                 value={regpassword}
                 onChangeText={(text) => setregpassword(text)}
                 secureTextEntry={true}
                 placeholder="Enter Your Password"
               />
-              <TextInput
-                style={styles.TextInput}
+              <RNTextInput
                 value={regconfirmpassword}
                 onChangeText={setconfirmPassword}
                 secureTextEntry={true}

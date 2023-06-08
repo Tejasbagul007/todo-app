@@ -8,7 +8,7 @@ const SignupSignin = ({ text, onPress }) => {
   return (
     <View>
     <TouchableOpacity onPress={onPress} >
-        <Text style={Styles.btnsignIn}>{text}</Text>
+        <Text style={Styles.btnSignIn}>{text}</Text>
       </TouchableOpacity>
    </View>
   )
@@ -18,11 +18,10 @@ export default SignupSignin
 
 
 const Styles = StyleSheet.create({
-    btnsignIn: {
-      // flex: 1,
+    btnSignIn: {
       color: colors.aqua,
       left: wp('3%'),
-      marginTop: hp('0%'),
+      marginTop: hp('0'),
     },
   });
   

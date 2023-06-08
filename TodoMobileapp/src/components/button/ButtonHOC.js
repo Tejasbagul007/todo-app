@@ -17,13 +17,13 @@ const buttonWidth = windowWidth * 0.8;
 
 const ButtonsHOC = ({ text, onPress }) => {
   return (
-    <View style={styles.mainbtn}>
+    <View style={styles.mainBtn}>
       <TouchableOpacity
         onPress={onPress}
         style={[styles.btn, { width: buttonWidth }]}
       >
         <View>
-          <Text style={styles.btntextcolor}>{text}</Text>
+          <Text style={styles.btnTextColor}>{text}</Text>
         </View>
       </TouchableOpacity>
     </View>
@@ -33,7 +33,7 @@ const ButtonsHOC = ({ text, onPress }) => {
 export default ButtonsHOC;
 
 const styles = StyleSheet.create({
-  mainbtn: {
+  mainBtn: {
     marginBottom: hp("3%"),
 
   },
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     borderRadius: wp("2%"),
     backgroundColor: colors.aqua,
   },
-  btntextcolor: {
+  btnTextColor: {
     color: colors.white,
     fontWeight: "bold",
     letterSpacing: wp("0.2%"),

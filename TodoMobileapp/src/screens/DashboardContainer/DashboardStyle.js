@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     width: wp("70%"),
     height: hp("5%"),
     marginTop: hp("1%"),
-    backgroundColor: colors.DodgerBlue,
+    backgroundColor: colors.dodgerBlue,
     justifyContent: "center",
     alignItems: "center",
   },
@@ -186,7 +186,7 @@ const styles = StyleSheet.create({
   },
 
   logoutText: {
-    color: colors.Teal, // Customize the color
+    color: colors.teal, // Customize the color
     fontSize: wp("4%"),
     fontWeight: "bold",
     marginBottom: hp("1%"),

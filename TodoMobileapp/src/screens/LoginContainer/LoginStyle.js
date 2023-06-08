@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
     padding: 10,
     color: colors.black,
     alignItems: "center",
-    // textAlign: 'right',
   },
   schoolImg: {
     marginTop: hp("4%"),
@@ -37,18 +36,9 @@ const styles = StyleSheet.create({
     height: hp("20%"),
     marginRight: wp("6%"),
   },
-  TextInputmain: {
+  textInputmain: {
     flex: 1,
     marginTop: hp("5%"),
-  },
-  TextInput: {
-    width: wp("84%"),
-    padding: hp("2%"),
-    marginBottom: hp("2.4%"),
-    alignItems: "center",
-    color: colors.black,
-    borderRadius: wp("6%"),
-    backgroundColor: colors.white,
   },
 
   textWords2: {

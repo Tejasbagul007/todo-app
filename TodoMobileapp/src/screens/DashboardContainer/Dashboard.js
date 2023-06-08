@@ -165,11 +165,11 @@ const DashboardScreen = ({navigation}) => {
           <View style={styles.clockContainer}>
             <AnalogClock
               size={wp("30%")}
-              colorClock={colors.PowderBlue}
-              colorNumber={colors.Teal}
-              colorCenter={colors.softmint}
-              colorHour={colors.Teal}
-              colorMinutes={colors.BluishTurquoise}
+              colorClock={colors.powderBlue}
+              colorNumber={colors.teal}
+              colorCenter={colors.softMint}
+              colorHour={colors.teal}
+              colorMinutes={colors.bluishTurquoise}
               colorSeconds={colors.silver}
               autostart={true}
               showSeconds

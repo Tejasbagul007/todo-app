@@ -41,20 +41,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: wp("4.8%"),
   },
-  TextInputmain: {
+  textInputmain: {
     alignSelf: "center",
     marginTop: hp("6%"),
     marginBottom: hp("2%"),
   },
-  TextInput: {
-    width: wp("84%"),
-    padding: hp("2%"),
-    marginBottom: hp("2.4%"),
-    alignItems: "center",
-    color: colors.black,
-    borderRadius: wp("6%"),
-    backgroundColor: colors.white,
-  },
+
   btn: {
     flex: 3,
     justifyContent: "center",
