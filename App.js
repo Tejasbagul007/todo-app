@@ -14,6 +14,7 @@ import { store, persistor } from "./TodoMobileapp/src/redux/store";
 import { Authentication } from "./TodoMobileapp/src/components/validations/Authentication";
 
 
+
 const Stack = createStackNavigator();
 function App() {
   return (
